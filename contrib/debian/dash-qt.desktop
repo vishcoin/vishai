@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Vishai
+Comment=Vishai P2P Cryptocurrency
+Comment[fr]=Vishai, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Vishai, eşten eşe kriptografik sanal para birimi
+Exec=vishai-qt %u
+Terminal=false
+Type=Application
+Icon=vishai128
+MimeType=x-scheme-handler/vishai;
+Categories=Office;Finance;

@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/vishai_bg.qm</file>
+        <file alias="de">locale/vishai_de.qm</file>
+        <file alias="en">locale/vishai_en.qm</file>
+        <file alias="es">locale/vishai_es.qm</file>
+        <file alias="fi">locale/vishai_fi.qm</file>
+        <file alias="fr">locale/vishai_fr.qm</file>
+        <file alias="it">locale/vishai_it.qm</file>
+        <file alias="ja">locale/vishai_ja.qm</file>
+        <file alias="pl">locale/vishai_pl.qm</file>
+        <file alias="pt">locale/vishai_pt.qm</file>
+        <file alias="ru">locale/vishai_ru.qm</file>
+        <file alias="sk">locale/vishai_sk.qm</file>
+        <file alias="sv">locale/vishai_sv.qm</file>
+        <file alias="vi">locale/vishai_vi.qm</file>
+        <file alias="zh_CN">locale/vishai_zh_CN.qm</file>
+        <file alias="zh_TW">locale/vishai_zh_TW.qm</file>
+    </qresource>
+</RCC>

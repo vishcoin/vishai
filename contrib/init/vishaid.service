@@ -1,0 +1,22 @@
+[Unit]
+Description=Vishai's distributed currency daemon
+After=network.target
+
+[Service]
+User=vishaicore
+Group=vishaicore
+
+Type=forking
+PIDFile=/var/lib/vishaid/vishaid.pid
+ExecStart=/usr/bin/vishaid -daemon -pid=/var/lib/vishaid/vishaid.pid \
+-conf=/etc/vishaicore/vishai.conf -datadir=/var/lib/vishaid -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
