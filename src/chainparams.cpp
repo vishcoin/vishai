@@ -101,7 +101,7 @@ public:
         consensus.nSuperblockStartBlock = 99999999;
         consensus.nSuperblockCycle = 21600;
         consensus.nGovernanceMinQuorum = 10; // Active Masternode
-        consensus.nGovernanceFilterElements = 20000;
+        consensus.nGovernanceFilterElements = 1000000;
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
@@ -170,7 +170,8 @@ public:
 
         // change aku
         // TODO_EDIT: perlu edit
-        // vSeeds.push_back(CDNSSeedData("172.16.238.11", "172.16.238.11"));
+        vSeeds.push_back(CDNSSeedData("38.242.244.19", "38.242.244.19"));
+        vSeeds.push_back(CDNSSeedData("173.212.215.76", "173.212.215.76"));
         // vSeeds.push_back(CDNSSeedData("172.16.238.12", "172.16.238.12"));
 		// vSeeds.push_back(CDNSSeedData("108.61.202.115", "108.61.202.115"));
 		// vSeeds.push_back(CDNSSeedData("104.207.149.95", "104.207.149.95"));

@@ -11,7 +11,7 @@ Masternodes enable the following services:
 
 •VISH will make using cryptocurrency as easy as using PayPal.
 
-Masternode owners must have possession of 20000 VISH, which they prove by signing a message and broadcasting to the network. Those coins can be moved at any time, but moving them will cause the masternode to fall out of queue and stop earning rewards.
+Masternode owners must have possession of 1000000 VISH, which they prove by signing a message and broadcasting to the network. Those coins can be moved at any time, but moving them will cause the masternode to fall out of queue and stop earning rewards.
 
 
 Masternode users also are given voting rights on proposals. Each masternode has one vote and this vote can be used on budget proposals or important decisions that affect VISH.

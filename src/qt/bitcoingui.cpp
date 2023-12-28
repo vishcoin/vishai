@@ -202,7 +202,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     frameSocialLayout->setContentsMargins(16, 0, 16, 0);
     frameSocialLayout->setSpacing(16);
     QLabel* web = new QLabel();
-    web->setObjectName(QLatin1String("web"));
+    web->setObjectName(QStringLiteral("web"));
     web->setMinimumSize(QSize(21, 21));
     web->setMaximumSize(QSize(21, 21));
     web->setBaseSize(QSize(0, 0));
@@ -212,10 +212,10 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     web->setToolTip(QApplication::translate("OverviewPage", "Visit Vishai Coin on Facebook.", nullptr));
 #endif // QT_NO_TOOLTIP
-    web->setText(QApplication::translate("OverviewPage", "<a href=\"https://www.facebook.com/Vishai-Coin-102068301351759\"><img src=\":/icons/web\" width=\"21\" height=\"21\"></a>", nullptr));
+    web->setText(QApplication::translate("OverviewPage", "<a href=\"#\"><img src=\":/icons/web\" width=\"21\" height=\"21\"></a>", nullptr));
             
             QLabel* www = new QLabel();
-    www->setObjectName(QLatin1String("www"));
+    www->setObjectName(QStringLiteral("www"));
     www->setMinimumSize(QSize(21, 21));
     www->setMaximumSize(QSize(21, 21));
     www->setBaseSize(QSize(0, 0));
@@ -225,11 +225,11 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     www->setToolTip(QApplication::translate("OverviewPage", "Visit the Vishai Coin Website.", nullptr));
 #endif // QT_NO_TOOLTIP
-    www->setText(QApplication::translate("OverviewPage", "<a href=\"https://vishaipro.tech\"><img src=\":/icons/www\" width=\"21\" height=\"21\"></a>", nullptr));
+    www->setText(QApplication::translate("OverviewPage", "<a href=\"https://vishcoin.com\"><img src=\":/icons/www\" width=\"21\" height=\"21\"></a>", nullptr));
             
             
     QLabel* mcm = new QLabel();
-    mcm->setObjectName(QLatin1String("mcm"));
+    mcm->setObjectName(QStringLiteral("mcm"));
     mcm->setMinimumSize(QSize(21, 21));
     mcm->setMaximumSize(QSize(21, 21));
     mcm->setBaseSize(QSize(0, 0));
@@ -239,9 +239,9 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     mcm->setToolTip(QApplication::translate("OverviewPage", "Vishai Coin is Open Source on Github.", nullptr));
 #endif // QT_NO_TOOLTIP
-    mcm->setText(QApplication::translate("OverviewPage", "<a href=\"https://github.com/vishaipro/vishai\"><img src=\":/icons/mcm\" width=\"21\" height=\"21\"></a>", nullptr));
+    mcm->setText(QApplication::translate("OverviewPage", "<a href=\"https://github.com/vishcoin/vishai\"><img src=\":/icons/mcm\" width=\"21\" height=\"21\"></a>", nullptr));
     QLabel* twitter = new QLabel();
-    twitter->setObjectName(QLatin1String("twitter"));
+    twitter->setObjectName(QStringLiteral("twitter"));
     twitter->setMinimumSize(QSize(21, 21));
     twitter->setMaximumSize(QSize(21, 21));
     twitter->setBaseSize(QSize(0, 0));
@@ -251,9 +251,9 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     twitter->setToolTip(QApplication::translate("OverviewPage", "Follow Vishai Coin on Twitter.", nullptr));
 #endif // QT_NO_TOOLTIP
-    twitter->setText(QApplication::translate("OverviewPage", "<a href=\"https://twitter.com/vishaipro\"><img src=\":/icons/twitter\" width=\"21\" height=\"21\"></a>", nullptr));
+    twitter->setText(QApplication::translate("OverviewPage", "<a href=\"https://twitter.com/vishaicoin\"><img src=\":/icons/twitter\" width=\"21\" height=\"21\"></a>", nullptr));
     QLabel* discord = new QLabel();
-    discord->setObjectName(QLatin1String("discord"));
+    discord->setObjectName(QStringLiteral("discord"));
     discord->setMinimumSize(QSize(21, 21));
     discord->setMaximumSize(QSize(21, 21));
     discord->setBaseSize(QSize(0, 0));
@@ -263,10 +263,10 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     discord->setToolTip(QApplication::translate("OverviewPage", "Join the Official Vishai Coin Discord Community.", nullptr));
 #endif // QT_NO_TOOLTIP
-    discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/r7zKfy5\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
+    discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/tSnybKA8\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
             
             QLabel* webs = new QLabel();
-    webs->setObjectName(QLatin1String("webs"));
+    webs->setObjectName(QStringLiteral("webs"));
     webs->setMinimumSize(QSize(21, 21));
     webs->setMaximumSize(QSize(21, 21));
     webs->setBaseSize(QSize(0, 0));
@@ -276,7 +276,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     webs->setToolTip(QApplication::translate("OverviewPage", "Explore the Vishai Coin Blockchain.", nullptr));
 #endif // QT_NO_TOOLTIP
-    webs->setText(QApplication::translate("OverviewPage", "<a href=\"http://explorer.vishaipro.tech\"><img src=\":/icons/webs\" width=\"21\" height=\"21\"></a>", nullptr));
+    webs->setText(QApplication::translate("OverviewPage", "<a href=\"http://explorer.vishcoin.com\"><img src=\":/icons/webs\" width=\"21\" height=\"21\"></a>", nullptr));
      
     frameSocialLayout->addWidget(webs);        
     frameSocialLayout->addWidget(www);        

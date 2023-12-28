@@ -22,19 +22,19 @@ Before you can run a masternode you have to be able to run the Vishai Coin daemo
     b. Command line: entering command ./vishai-cli getnewaddress<br><br>
 The address will be presented back to you, copy it for use in the next steps
 
-2. Send your local wallet 20000 VISH by:<br>  
-    a. QT/GUI Wallet: selecting the Send tab, entering the address obtained from step 1 in the "Pay To:" field and entering "20000" in the "Amount" field.  Make sure the "Subtract fee from amount" check box is <b>NOT</b> checked.  You will see the transaction on the screen in the Overview and Transactions tab<br><br>
-    b. Command line: entering command ./vishai-cli sendtoaddress "address from step 1" 20000.  The system will give you the TransID as confirmation <br>
+2. Send your local wallet 1000000 VISH by:<br>  
+    a. QT/GUI Wallet: selecting the Send tab, entering the address obtained from step 1 in the "Pay To:" field and entering "1000000" in the "Amount" field.  Make sure the "Subtract fee from amount" check box is <b>NOT</b> checked.  You will see the transaction on the screen in the Overview and Transactions tab<br><br>
+    b. Command line: entering command ./vishai-cli sendtoaddress "address from step 1" 1000000.  The system will give you the TransID as confirmation <br>
 
 
 3. Now wait for your transaction to have 15 confirmations so the network has been properly updated.  Do this by:
-    a. QT/GUI Wallet: Hovering your mouse over the transaction which will be called "payment to yourself".  Don't worry, it won't show 20000 Vishai coin, only the fee. The wallet will pop up a message such as (6 confirmations, will be available after 10).  You are wating on this to reach 15 confirmations.<br><br>
+    a. QT/GUI Wallet: Hovering your mouse over the transaction which will be called "payment to yourself".  Don't worry, it won't show 1000000 Vishai coin, only the fee. The wallet will pop up a message such as (6 confirmations, will be available after 10).  You are wating on this to reach 15 confirmations.<br><br>
     b. Command line: entering command ./vishai-cli listtransactions.  The system will give an output similar to the below, you are waiting on the confirmations to reach 15.<br>
 
                 "account": "",
                     "address": "WXQ2sBjp1bNEqrtiCG934Cd2ES5Egtgf4J",
                     "category": "received",
-                    "amount": 20000.00000000,
+                    "amount": 1000000.00000000,
                     "vout": 1,
                     "fee": -0.00020582,
                     <b>"confirmations": 6,</b>
@@ -103,7 +103,7 @@ Next you need to think of a rpcuser (user name) and rpcpassword (password) to us
 <br><br>
 
 <b><u>Preparing the conf Files</u></b><br><br>
-Now you are going to update 2 files ending in .conf on your local machine that you sent the 20000 vishai to as well as create 2 .conf files on the VPS/Linux Server.  These are located in the data directory your wallet is using. When installing the wallet you would have chosen the location but can also access the files by using the buttons in the GUI/QT wallet by:<br><br>
+Now you are going to update 2 files ending in .conf on your local machine that you sent the 1000000 vishai to as well as create 2 .conf files on the VPS/Linux Server.  These are located in the data directory your wallet is using. When installing the wallet you would have chosen the location but can also access the files by using the buttons in the GUI/QT wallet by:<br><br>
 
 a. QT/GUI Wallet: Click the Tools menu then click "Open Masternode Configuration File" which will open a text file.  In the text file you will paste in the following configuration substituting in the information captured in previous steps.<br><br>
 
@@ -149,9 +149,9 @@ Add the following substituting in the info you gathered above<br><br>
 <br><br>
 Save your file.  To save in nano press control and x at the same time, press y to confirm, press enter save<br><br>
 
-It is now time to download and install the Vishai Coin daemon to run on your VPS/Linux Server.  enter the following commands to download and extract the daemon on your VPS.  If you decide to do this in a different folder other than your home folder you need to kconsider that when starting it alter.  This guide assumes you are putting in in your home folder and running as the root user that most VPS providers give you.  First navigate to the Vishai Coin github at https://github.com/vishaipro/vishai/releases and find the release that matches the VPS operating system you arerunning.  This guide is running it on ubuntu 18.04 so substitute in the url that best matching your system:<br><br>
+It is now time to download and install the Vishai Coin daemon to run on your VPS/Linux Server.  enter the following commands to download and extract the daemon on your VPS.  If you decide to do this in a different folder other than your home folder you need to kconsider that when starting it alter.  This guide assumes you are putting in in your home folder and running as the root user that most VPS providers give you.  First navigate to the Vishai Coin github at https://github.com/vishcoin/vishai/releases and find the release that matches the VPS operating system you arerunning.  This guide is running it on ubuntu 18.04 so substitute in the url that best matching your system:<br><br>
 
-        wget https://github.com/vishaipro/vishai/releases/download/v2.0.0.2/vishai-v2002-ubuntu18-64.zip
+        wget https://github.com/vishcoin/vishai/releases/download/v2.0.0.2/vishai-v2002-ubuntu18-64.zip
         unzip vishai-v2002-ubuntu18-64.zip
         chmod vishaid vishai-cl vishai-tx 755
 

@@ -24,7 +24,7 @@ sudo apt install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-t
 
 Download the stable Vishai Coin repository:
 
-git clone https://github.com/vishaipro/vishai.git
+git clone https://github.com/vishcoin/vishai.git
 
 cd vishai
 

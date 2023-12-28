@@ -3,7 +3,7 @@ Vishai Core version 0.12.2.4
 
 Release is now available from:
 
-  <https://github.com/vishaidev-the-man/vishai/releases>
+  <https://github.com/vishcoin/vishai/releases>
 
 This is a new version release, bringing various bugfixes and other
 improvements.

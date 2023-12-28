@@ -1,6 +1,6 @@
 package=fontconfig
 $(package)_version=2.12.4
-$(package)_download_path=https://ftp.osuosl.org/pub/blfs/conglomeration/fontconfig/
+$(package)_download_path=https://www.freedesktop.org/software/fontconfig/release/
 $(package)_file_name=$(package)-$($(package)_version).tar.bz2
 $(package)_sha256_hash=668293fcc4b3c59765cdee5cee05941091c0879edcc24dfec5455ef83912e45c
 $(package)_dependencies=freetype expat

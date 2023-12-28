@@ -272,10 +272,8 @@ bool CMasternode::IsValidNetAddr(CService addrIn)
     LogPrintf("kampret checking address valid %s -- %d -- %d -- %d -- \n\n", addrIn.ToStringIP(), addrIn.IsIPv4(), IsReachable(addrIn), addrIn.IsRoutable());
 
     // kampret warning
-
-    // && addrIn.IsRoutable()
     return Params().NetworkIDString() == CBaseChainParams::REGTEST ||
-            (addrIn.IsIPv4() && IsReachable(addrIn));
+            (addrIn.IsIPv4() && IsReachable(addrIn) && addrIn.IsRoutable());
 }
 
 masternode_info_t CMasternode::GetInfo()

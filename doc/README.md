@@ -1,7 +1,7 @@
 Vishai Core 1.2.1.0
 =====================
 
-This is the official reference wallet for Vishai digital currency and comprises the backbone of the Vishai peer-to-peer network. You can [download Vishai Core](https://github.com/vishaidev-the-man/vishai/releases) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Vishai digital currency and comprises the backbone of the Vishai peer-to-peer network. You can [download Vishai Core](https://github.com/vishcoin/vishai/releases) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -24,9 +24,9 @@ Drag Vishai-Qt to your applications folder, and then run Vishai-Qt.
 
 ### Need Help?
 
-* See the [Vishai documentation](https://github.com/vishaidev-the-man/vishai/tree/master/doc)
+* See the [Vishai documentation](https://github.com/vishcoin/vishai/tree/master/doc)
 for help and more information.
-* Ask for help on [VISH Discord channel](https://discord.gg/6vGNAh5).
+* Ask for help on [VISH Discord channel](https://discord.gg/tSnybKA8).
 
 
 Building
@@ -57,7 +57,7 @@ The Vishai Core repo's [root README](/README.md) contains relevant information o
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on [VISH Discord channel](https://discord.gg/6vGNAh5).
+* Discuss on [VISH Discord channel](https://discord.gg/tSnybKA8).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
