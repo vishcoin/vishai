@@ -172,13 +172,23 @@ public:
         // TODO_EDIT: perlu edit
         vSeeds.push_back(CDNSSeedData("38.242.244.19", "38.242.244.19"));
         vSeeds.push_back(CDNSSeedData("173.212.215.76", "173.212.215.76"));
-        // vSeeds.push_back(CDNSSeedData("172.16.238.12", "172.16.238.12"));
-		// vSeeds.push_back(CDNSSeedData("108.61.202.115", "108.61.202.115"));
-		// vSeeds.push_back(CDNSSeedData("104.207.149.95", "104.207.149.95"));
-		// vSeeds.push_back(CDNSSeedData("45.32.176,249", "45.32.176,249"));
-		// vSeeds.push_back(CDNSSeedData("198.13.39.174", "198.13.39.174"));
-	    //     vSeeds.push_back(CDNSSeedData("104.155.177.16", "104.155.177.16"));
-
+        vSeeds.push_back(CDNSSeedData("173.212.215.76","173.212.215.76"));
+        vSeeds.push_back(CDNSSeedData("38.242.244.19","38.242.244.19"));
+        vSeeds.push_back(CDNSSeedData("38.242.244.19","38.242.244.19"));
+        vSeeds.push_back(CDNSSeedData("173.212.215.76","173.212.215.76"));
+        vSeeds.push_back(CDNSSeedData("45.32.176.249","45.32.176.249"));
+        vSeeds.push_back(CDNSSeedData("173.212.215.76","173.212.215.76"));
+        vSeeds.push_back(CDNSSeedData("38.242.244.19","38.242.244.19"));
+        vSeeds.push_back(CDNSSeedData("1.14.104.202","1.14.104.202"));
+        vSeeds.push_back(CDNSSeedData("1.163.71.32","1.163.71.32"));
+        vSeeds.push_back(CDNSSeedData("1.169.155.231","1.169.155.231"));
+        vSeeds.push_back(CDNSSeedData("1.170.217.199","1.170.217.199"));
+        vSeeds.push_back(CDNSSeedData("1.188.100.50","1.188.100.50"));
+        vSeeds.push_back(CDNSSeedData("1.198.209.97","1.198.209.97"));
+        vSeeds.push_back(CDNSSeedData("1.203.117.250","1.203.117.250"));
+        vSeeds.push_back(CDNSSeedData("1.204.250.229","1.204.250.229"));
+        vSeeds.push_back(CDNSSeedData("1.55.95.81","1.55.95.81"));
+        vSeeds.push_back(CDNSSeedData("101.44.80.236","101.44.80.236"));
         // change aku end
 
        

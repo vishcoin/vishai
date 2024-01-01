@@ -6,13 +6,13 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/tonnage
-src/tonnaged
-src/tonnage-cli
-src/tonnage-tx
-src/test/test_tonnage
-src/qt/test/test_tonnage-qt
-src/bench/bench_tonnage
+src/vishai
+src/vishaid
+src/vishai-cli
+src/vishai-tx
+src/test/test_vishai
+src/qt/test/test_vishai-qt
+src/bench/bench_vishai
 
 # autoreconf
 Makefile.in
@@ -35,8 +35,8 @@ config.log
 config.status
 configure
 libtool
-src/config/tonnage-config.h
-src/config/tonnage-config.h.in
+src/config/vishai-config.h
+src/config/vishai-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -81,12 +81,12 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-tonnage-qt
-tonnage-Qt.app
+vishai-qt
+vishai-Qt.app
 
 # Unit-tests
 Makefile.test
-tonnage-qt_test
+vishai-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -100,7 +100,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_tonnage.coverage/
+test_vishai.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -124,11 +124,11 @@ share/BitcoindComparisonTool.jar
 /doc/doxygen/
 
 libvecoconsensus.pc
-src/qt/tonnage-qt.bash
+src/qt/vishai-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-tonnage-cli
-tonnaged
-tonnage-qt
+vishai-cli
+vishaid
+vishai-qt
 make
