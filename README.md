@@ -24,7 +24,7 @@ If you like the idea of owning and controlling your own money as well as funding
 <tr><td>PoW block reward</td><td>5000 VISH</td></tr>
 <tr><td>Hashing algorithm</td><td>YesPoWer</td></tr>
 <tr><td>MN Payment starting block</td><td>14400</td></tr>
-<tr><td>Maximum VISH supply</td><td>40,000,000</td></tr>
+<tr><td>Maximum VISH supply</td><td>13,000,000,000</td></tr>
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>60 seconds</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>
