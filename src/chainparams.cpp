@@ -221,15 +221,23 @@ public:
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "04825df8a146091cd7527a55a648cf1c23efb3cc25bed2029eaa17a606918be747b9afa29e08da4df312f8cfc9823fb3707635e8744000390574b40f28c0d509a9";
 
+
+        // checkpointData = (CCheckpointData) {
+        //     boost::assign::map_list_of
+        //     (     0, uint256S("0x00056ccc9f59bc9e189989e73582e9a51a5b7190a2f6529ff1c6c93f7555a35f")),
+        //         1703055901, //1519569150 * UNIX timestamp of last checkpoint block
+        //         0,          // * total number of transactions between genesis and last checkpoint
+        //                     //   (the tx=... number in the SetBestChain debug.log lines)
+        //         10          // * estimated number of transactions per day after checkpoint
+        // };
+
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (     0, uint256S("0x00056ccc9f59bc9e189989e73582e9a51a5b7190a2f6529ff1c6c93f7555a35f")),
-			// (100000, uint256S("0x0000038508708ac5387431ad5b53e439fb8b3e9ab2e6aae28e9573e5a19f4df8"))
-		    //     (200000, uint256S("0x000001a1593ab16e3c7d586594a9489b548e07fa94015d4b330431940408dbbc")),
-                1703055901, // * UNIX timestamp of last checkpoint block
-                0,      // * total number of transactions between genesis and last checkpoint
-                            //   (the tx=... number in the SetBestChain debug.log lines)
-                10         // * estimated number of transactions per day after checkpoint
+            (     0, uint256S("0x00056ccc9f59bc9e189989e73582e9a51a5b7190a2f6529ff1c6c93f7555a35f"))
+			    (13886, uint256S("0000000c31385a8bf5ec491729f3129c2b72f84a3e278df8b785bf9c96bfde1b")),
+                1704258017, 
+                25066,
+                2000       
         };
     }
 };

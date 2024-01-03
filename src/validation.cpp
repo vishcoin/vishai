@@ -51,6 +51,7 @@
 #include <boost/math/distributions/poisson.hpp>
 #include <boost/thread.hpp>
 
+
 using namespace std;
 
 #if defined(NDEBUG)
@@ -1366,16 +1367,24 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 
 {
     CAmount ret = blockValue * 0;
+    // size_t mnCount = chainActive.Tip() == nullptr ? 0 : deterministicMNManager->GetListForBlock(chainActive.Tip()).GetAllMNsCount();
+    int nMnCount = mnodeman.CountEnabled();
 
     int nMNPIBlock = Params().GetConsensus().nMasternodePaymentsIncreaseBlock;
     int nMNPIPeriod = Params().GetConsensus().nMasternodePaymentsIncreasePeriod;
+    int masterNodeCount = Params().GetConsensus().nGovernanceMinQuorum;
+    int masterNodeActivePayment = Params().GetConsensus().nMasternodePaymentsStartBlock;
 
-    if(nHeight > nMNPIBlock)    ret = blockValue / 16 * 6; 
-    if(nHeight > nMNPIPeriod)   ret = blockValue / 15 * 7; 
-    if(nHeight > nMNPIPeriod*2) ret = blockValue / 14 * 8; 
-    if(nHeight > nMNPIPeriod*3) ret = blockValue / 13 * 9; 
-    if(nHeight > nMNPIPeriod*4) ret = blockValue / 12 * 9;
-    if(nHeight > nMNPIPeriod*5) ret = blockValue * 0.8;
+    if (nMnCount < masterNodeCount) {
+        return ret;
+    }
+
+    if (nHeight < masterNodeActivePayment) {
+        return ret;
+    }
+
+
+    ret = blockValue * 0.4;
        
     return ret;
 }
