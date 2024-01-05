@@ -451,6 +451,8 @@ UniValue masternodelist(const UniValue& params, bool fHelp)
 
     if (fHelp || (
                 strMode != "activeseconds" && strMode != "addr" && strMode != "full" && strMode != "info" &&
+                strMode != "json" &&
+                strMode != "count" &&
                 strMode != "lastseen" && strMode != "lastpaidtime" && strMode != "lastpaidblock" &&
                 strMode != "protocol" && strMode != "payee" && strMode != "pubkey" &&
                 strMode != "rank" && strMode != "status"))
@@ -483,7 +485,7 @@ UniValue masternodelist(const UniValue& params, bool fHelp)
                 );
     }
 
-    if (strMode == "full" || strMode == "lastpaidtime" || strMode == "lastpaidblock") {
+    if (strMode == "full"  || strMode == "count" || strMode == "json" || strMode == "lastpaidtime" || strMode == "lastpaidblock") {
         CBlockIndex* pindex = NULL;
         {
             LOCK(cs_main);
@@ -544,6 +546,53 @@ UniValue masternodelist(const UniValue& params, bool fHelp)
                 if (strFilter !="" && strInfo.find(strFilter) == std::string::npos &&
                     strOutpoint.find(strFilter) == std::string::npos) continue;
                 obj.push_back(Pair(strOutpoint, strInfo));
+            } else if (strMode == "json") {
+                std::ostringstream streamInfo;
+                streamInfo <<  mn.addr.ToString() << " " <<
+                               CBitcoinAddress(mn.pubKeyCollateralAddress.GetID()).ToString() << " " <<
+                               mn.GetStatus() << " " <<
+                               mn.nProtocolVersion << " " <<
+                               SafeIntVersionToString(mn.lastPing.nSentinelVersion) << " " <<
+                               (mn.lastPing.fSentinelIsCurrent ? "current" : "expired") << " " <<
+                               (int64_t)mn.lastPing.sigTime << " " <<
+                               (int64_t)(mn.lastPing.sigTime - mn.sigTime) << " " <<
+                               mn.GetLastPaidTime() << " " <<
+                               mn.GetLastPaidBlock();
+                std::string strInfo = streamInfo.str();
+                if (strFilter !="" && strInfo.find(strFilter) == std::string::npos &&
+                    strOutpoint.find(strFilter) == std::string::npos) continue;
+                UniValue objMN(UniValue::VOBJ);
+                objMN.push_back(Pair("txhash", mnpair.first.hash.ToString()));
+                objMN.push_back(Pair("proTxHash", mnpair.first.hash.ToString()));
+                objMN.push_back(Pair("outidx", (int32_t)mnpair.first.n));
+                objMN.push_back(Pair("address", mn.addr.ToString()));
+                objMN.push_back(Pair("payee", CBitcoinAddress(mn.pubKeyCollateralAddress.GetID()).ToString()));
+                objMN.push_back(Pair("status", mn.GetStatus()));
+                objMN.push_back(Pair("protocol", mn.nProtocolVersion));
+                objMN.push_back(Pair("sentinelversion", mn.lastPing.nSentinelVersion > DEFAULT_SENTINEL_VERSION ? SafeIntVersionToString(mn.lastPing.nSentinelVersion) : "Unknown"));
+                objMN.push_back(Pair("sentinelstate", (mn.lastPing.fSentinelIsCurrent ? "current" : "expired")));
+                objMN.push_back(Pair("lastseen", (int64_t)mn.lastPing.sigTime));
+                objMN.push_back(Pair("activeseconds", (int64_t)(mn.lastPing.sigTime - mn.sigTime)));
+                objMN.push_back(Pair("lastpaid", mn.GetLastPaidTime()));
+                objMN.push_back(Pair("lastpaidtime", mn.GetLastPaidTime()));
+                objMN.push_back(Pair("lastpaidblock", mn.GetLastPaidBlock()));
+                obj.push_back(Pair(strOutpoint, objMN));
+            } 
+            else if (strMode == "count") {
+
+
+                int total = mnodeman.CountEnabled();
+                int enabled = mnodeman.CountMasternodes();
+
+                UniValue obj(UniValue::VOBJ);
+
+                obj.push_back(Pair("total", total));
+                obj.push_back(Pair("enabled", enabled));
+
+                return obj;
+
+
+
             } else if (strMode == "lastpaidblock") {
                 if (strFilter !="" && strOutpoint.find(strFilter) == std::string::npos) continue;
                 obj.push_back(Pair(strOutpoint, mn.GetLastPaidBlock()));
